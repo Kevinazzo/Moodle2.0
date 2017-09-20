@@ -22,8 +22,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="Memory.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="moodle2\dbParams.py" />
     <Compile Include="moodle2\ORM.py" />
+    <Compile Include="moodle2\request\admin.py" />
+    <Compile Include="moodle2\request\apps.py" />
+    <Compile Include="moodle2\request\migrations\__init__.py" />
+    <Compile Include="moodle2\request\models.py" />
+    <Compile Include="moodle2\request\tests.py" />
+    <Compile Include="moodle2\request\views.py" />
+    <Compile Include="moodle2\request\__init__.py" />
     <Compile Include="moodle2\settings.py" />
     <Compile Include="moodle2\urls.py" />
     <Compile Include="moodle2\user\admin.py" />
@@ -38,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="moodle2" />
+    <Folder Include="moodle2\request\" />
+    <Folder Include="moodle2\request\migrations\" />
     <Folder Include="moodle2\user\" />
     <Folder Include="moodle2\user\migrations\" />
     <Folder Include="Extras\" />
