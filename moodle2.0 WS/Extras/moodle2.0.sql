@@ -5,9 +5,10 @@ USE `moodle2`;
 CREATE TABLE IF NOT EXISTS `users` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `username` VARCHAR(32) NOT NULL UNIQUE KEY,
-    `name` varchar(100) NOT NULL,
-    `firstsurname` varchar(100) not null,
-    `secsurname` varchar(100) not null,
+    `firstName` varchar(100) NOT NULL,
+    `secondName` varchar(100) not null,
+    `firstLastName` varchar(100) not null,
+    `secondLastName` varchar(100)not null,
     `password` VARCHAR(32) NOT NULL,
     `role` ENUM('teacher', 'student', 'admin') NOT NULL
 );
@@ -62,5 +63,11 @@ CREATE TABLE IF NOT EXISTS `team_members` ( # Lista: Alumnos en los diferentes e
         REFERENCES `courses` (`id`)
 );
 
-INSERT INTO `groups` (`id`,`name`) VALUES(NULL,"3A"),(NULL,"4A");
+INSERT INTO `groups` (`id`,`name`,`shift`,`desc`) VALUES(NULL,"3A","Mat","tercero A"),(NULL,"4A","Mat","Cuarto A");
+INSERT INTO `users` (`id`,`username`,`firstName`,`secondName`,`firstLastName`,`secondLastName`,`password`,`role`) values (NULL, "Kevinazzzo","Kevin","","Miranda","Luna","1234","student");
+
+SELECT * FROM `groups`;
+SELECT `username`, `password` FROM `users` WHERE `username`="Kevinazzzo" AND `password`="1234";
+
+DELETE from `groups` WHERE `id` >0;
 DROP DATABASE `moodle2`;
