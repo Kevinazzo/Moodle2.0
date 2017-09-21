@@ -58,6 +58,7 @@
     <InterpreterReference Include="Global|PythonCore|3.6" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Extras\moodle2.0.sql" />
     <Content Include="Extras\python packages.txt" />
     <Content Include="mappedFunctions.txt" />
   </ItemGroup>

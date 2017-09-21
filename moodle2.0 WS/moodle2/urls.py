@@ -13,8 +13,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from moodle2.user import views as userViews
+from moodle2.request import views as requestViews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^user/',userViews.test,name="testJSON")
+	url(r'^user/',userViews.test,name="testJSON"),
+	url(r'^groups/',requestViews.req_groups,name="req_groups"),
+	url(r'^(?P<username>\w+)',requestViews.authentication,name="authentication")
 ]

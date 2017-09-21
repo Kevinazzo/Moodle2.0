@@ -13,7 +13,7 @@ class group:
 		self.shift = _shift
 		self.desc = _desc
 	def __json__(self):
-		json={"id":id,"name":name,"shift":shift,"desc":desc}
+		json={"id":self.id,"name":self.name,"shift":self.shift,"desc":self.desc}
 		return json
 class course:
 	def __init__(self, _id, _name, _owner):

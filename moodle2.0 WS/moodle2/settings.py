@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'moodle2.user'
+	'moodle2.user',
+	'moodle2.request'
 ]
 
 MIDDLEWARE = [
