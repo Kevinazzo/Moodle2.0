@@ -6,8 +6,8 @@ from moodle2.dbParams import *
 
 
 # Create your views here.
-def authentication(request, username, password="1234"):
-	if 	cur.execute("SELECT `username`, `password` FROM `users` WHERE `username`="Kevinazzzo" AND `password`="1234";") == 1:
+def authentication(request, username, password):
+	if 	cur.execute("SELECT `username`, `password` FROM `users` WHERE `username`= \""+username+"\" AND `password`= \""+password+"\";") == 1:
 		return HttpResponse("<p>TRUE</p>")
 	else:
 		return HttpResponse("<p>NOPE</p>")

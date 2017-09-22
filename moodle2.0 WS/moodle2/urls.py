@@ -19,5 +19,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^user/',userViews.test,name="testJSON"),
 	url(r'^groups/',requestViews.req_groups,name="req_groups"),
-	url(r'^(?P<username>\w+)',requestViews.authentication,name="authentication")
+	url(r'^auth/(?P<username>\w+)-(?P<password>\w+)$',requestViews.authentication,name="authentication")
 ]
